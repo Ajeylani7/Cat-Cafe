@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tuxedo Cat Coffee</title>
+    <link type="text/css" rel="stylesheet" href="cafe.css" />
+  </head>
+  <body>
+    <header class="menu-images">
+      <img src="images/logo2.jpeg" id="logo-img" alt="Tuxedo Cat Coffee" />
+    </header>
+    <main>
+      <form
+        id="order_form"
+        name="order_form"
+        action="checkout.html"
+        method="get"
+      >
+        <section id="menu">
+          <h2>Menu</h2>
+          <p>Click an item to add it to your order.</p>
+          <ul>
+            <li>
+              <a href="#" onclick="addItem('Espresso')">
+                <img
+                  class="menu-images"
+                  id="images/espresso_info.jpg"
+                  src="images/espresso.jpg"
+                  alt="espresso"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#" onclick="addItem('Latte')">
+                <img
+                  class="menu-images"
+                  id="images/latte_info.jpg"
+                  src="images/latte.jpg"
+                  alt="latte"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#" onclick="addItem('Cappuccino')">
+                <img
+                  class="menu-images"
+                  id="images/cappuccino_info.jpg"
+                  src="images/cappuccino.jpg"
+                  alt="cappuccino"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#" onclick="addItem('Coffee')">
+                <img
+                  class="menu-images"
+                  id="images/coffee_info.jpg"
+                  src="images/coffee.jpg"
+                  alt="coffee"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#" onclick="addItem('Biscotti')">
+                <img
+                  class="menu-images"
+                  id="images/biscotti_info.jpg"
+                  src="images/biscotti.jpg"
+                  alt="biscotti"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#" onclick="addItem('Scone')">
+                <img
+                  class="menu-images"
+                  id="images/scone_info.jpg"
+                  src="images/scone.jpg"
+                  alt="scone"
+                />
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Your Order</h2>
+          <section>
+            <select
+              id="order"
+              name="order"
+              size="6"
+              onchange="highlightBunny()"
+            ></select>
+            <p id="total"></p>
+          </section>
+          <section id="buttons">
+            <input
+              type="button"
+              name="place_order"
+              id="place_order"
+              value="Place Order"
+            />
+            <input
+              type="button"
+              name="clear_order"
+              id="clear_order"
+              value="Clear Order"
+            />
+          </section>
+        </section>
+      </form>
+      <img id="bunny" src="images/bunny.png" alt="bunny" class="hidden" />
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="cafe.js"></script>
+  </body>
+</html>
